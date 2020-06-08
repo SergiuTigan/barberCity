@@ -7,53 +7,25 @@
 }
 
 .banner {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/backgrounds/_MG_0542-HDR.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/backgrounds/_MG_0542-HDR.jpg);
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #363b42;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.banner img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.25;
-}
-
-.banner .content {
-  position: relative;
-  max-width: 750px;
-  text-align: center;
-}
-
-.banner .content h2 {
-  text-align: start;
-  color: #198EA4;
-  font-size: 60px;
-}
-
-.banner .content h4 {
-  text-align: end;
-  color: #fff;
-  font-size: 30px;
-}
-
-.banner .content p {
-  color: #fff;
-  font-size: 18px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .banner header {
@@ -71,10 +43,26 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   z-index: 10000;
 }
 
 .banner header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner header .logo img {
+  width: 3vw;
+  margin-right: 10px;
+}
+
+.banner header .logo .name {
   color: #fff;
   text-decoration: none;
   font-size: 24px;
@@ -89,6 +77,117 @@
   height: 38px;
   background: url(../img/toggle.png);
   background-size: cover;
+  cursor: pointer;
+}
+
+.banner .content {
+  position: relative;
+  max-width: 750px;
+  margin-left: 100px;
+}
+
+.banner .content h2 {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  color: #198EA4;
+  font-size: 60px;
+}
+
+.banner .content h4 {
+  text-align: start;
+  color: #fff;
+  font-size: 30px;
+}
+
+.banner .content .book {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 100px;
+  margin-left: 220px;
+  color: #fff;
+  background: #ED4B22;
+  border: #ED4B22 2px solid;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.banner .content .book:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.banner .info {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 0;
+  left: 0;
+  width: 60vw;
+  padding: 40px 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10000;
+  background: #363b42;
+  color: #fff;
+}
+
+.banner .info .infoCard {
+  width: 30vw;
+  text-align: start;
+}
+
+.banner .info .infoCard i {
+  color: #198EA4;
+  float: left;
+  font-size: 25px;
+}
+
+.banner .social {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 0;
+  right: 0;
+  height: 6.3vh;
+  width: 39.1vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10000;
+  background: #1f7177;
+  color: #fff;
+}
+
+.banner .social i {
+  margin: 0 20px;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  color: #fff;
+  float: left;
+  font-size: 25px;
+}
+
+.banner .social i:first-child {
+  margin-left: 100px;
+}
+
+.banner .social i:hover {
+  color: #ED4B22;
   cursor: pointer;
 }
 
@@ -122,10 +221,14 @@
 }
 
 .about .imgBx {
-  background: url(../img/bc1.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/bg4.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg4.jpg);
   width: 50%;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .services {

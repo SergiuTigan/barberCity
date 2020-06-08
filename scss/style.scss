@@ -7,46 +7,19 @@
 
 // Header
 .banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(../img/backgrounds/_MG_0542-HDR.jpg);
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #363b42;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.25;
-    }
-
-    .content {
-        position: relative;
-        max-width: 750px;
-        text-align: center;
-
-        h2 {
-            text-align: start;
-            color: #198EA4;
-            font-size: 60px;
-        }
-
-        h4 {
-            text-align: end;
-            color: #fff;
-            font-size: 30px;
-        }
-
-        p {
-            color: #fff;
-            font-size: 18px;
-        }
-    }
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     header {
         position: absolute;
@@ -57,15 +30,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        align-content: center;
         z-index: 10000;
 
         .logo {
-            color: #fff;
-            text-decoration: none;
-            font-size: 24px;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 1px;
+            display:flex;   
+            align-items:center;
+            img {
+                width: 3vw;
+                margin-right: 10px;
+            }
+
+            .name {
+                color: #fff;
+                text-decoration: none;
+                font-size: 24px;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
         }
 
         .toggle {
@@ -75,6 +58,99 @@
             background: url(../img/toggle.png);
             background-size: cover;
             cursor: pointer;
+        }
+    }
+
+    .content {
+        position: relative;
+        max-width: 750px;
+        margin-left: 100px;
+
+        h2 {
+            justify-self: start;
+            color: #198EA4;
+            font-size: 60px;
+        }
+
+        h4 {
+            text-align: start;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .book {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 10px 100px;
+            margin-left: 220px;
+            color: #fff;
+            background: #ED4B22;
+            border: #ED4B22 2px solid;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
+    }
+
+
+    .info {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        width: 60vw;
+        padding: 40px 100px;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+        background: #363b42;
+        color: #fff;
+
+        .infoCard {
+            width: 30vw;
+            text-align: start;
+
+            i {
+                color: #198EA4;
+                float: left;
+                font-size: 25px;
+            }
+        }
+    }
+
+    .social {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        right: 0;
+        height: 6.3vh;
+        width: 39.1vw;
+        align-items: center;
+        z-index: 10000;
+        background: #1f7177;
+        color: #fff;
+
+        i {
+            margin: 0 20px;
+            justify-self: start;
+            color: #fff;
+            float: left;
+            font-size: 25px;
+
+            &:first-child {
+                margin-left: 100px;
+            }
+
+            &:hover {
+                color: #ED4B22;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -107,10 +183,14 @@
     }
 
     .imgBx {
-        background: url(../img/bc1.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)), url(../img/bg4.jpg);
         width: 50%;
         background-size: cover;
+        background-attachment: fixed;
         background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -139,9 +219,10 @@
 
             div {
                 img {
-                    max-width:100px;
+                    max-width: 100px;
                 }
-                h2{
+
+                h2 {
                     font-weight: 500;
                     font-size: 20px;
                     letter-spacing: 1px;
