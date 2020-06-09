@@ -1,7 +1,7 @@
 // Header
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)), url(../img/backgrounds/_MG_0542-HDR.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(../img/backgrounds/_MG_0542-HDR.jpg);
     position: relative;
     width: 100%;
     height: 100vh;
@@ -14,44 +14,90 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    header {
-        position: absolute;
+    .sticky {
+        position: fixed;
+        width: 100vw;
         top: 0;
-        left: 0;
-        width: 100%;
-        padding: 40px 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-        z-index: 10000;
+        z-index: 100000;
 
-        .logo {
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
+            padding: 40px 100px;
+            justify-content: space-between;
             align-items: center;
+            align-content: center;
+            z-index: 10000;
 
-            img {
-                width: 3vw;
-                margin-right: 10px;
+            &.bla {
+                background: $primary;
+                padding: 5px 100px;
+                transition: 0.3s;
+
+                .accent {
+                    color: $accent !important;
+                }
             }
 
-            .name {
-                color: #fff;
-                text-decoration: none;
-                font-size: 24px;
-                text-transform: uppercase;
-                font-weight: 700;
-                letter-spacing: 1px;
-            }
-        }
+            .logo {
+                display: flex;
+                align-items: center;
 
-        .toggle {
-            position: relative;
-            width: 36px;
-            height: 38px;
-            background: url(../img/toggle.png);
-            background-size: cover;
-            cursor: pointer;
+                img {
+                    width: 3vw;
+                    margin-right: 10px;
+                }
+
+                .name {
+                    color: $background;
+                    text-decoration: none;
+                    font-size: 24px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .nav {
+                position: relative;
+                cursor: pointer;
+                width: 35vw;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    list-style: none;
+
+                    li {
+                        a {
+                            font-size: 20px;
+                            font-weight: 700;
+                            text-decoration: none;
+                            color: $background;
+
+                        }
+
+                        &:last-child {
+                            a {
+                                border: $secondary 2px solid;
+                                border-radius: 10px;
+                                padding: 5px;
+                                color: $background;
+                            }
+                        }
+
+                        &:last-child:hover {
+                            a {
+                                background: $secondary;
+                                color: $background;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
