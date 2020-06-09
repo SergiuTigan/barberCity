@@ -108,13 +108,13 @@
   background: #ED4B22;
   border: #ED4B22 2px solid;
   border-radius: 5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   cursor: pointer;
 }
 
 .banner .content .book:hover {
   background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .banner .info {
@@ -232,9 +232,91 @@
 }
 
 .services {
-  background: #1f7177;
+  background: #363b42;
   padding: 100px;
   text-align: center;
+}
+
+.services h2 {
+  color: #ED4B22;
+}
+
+.services .text {
+  position: relative;
+  color: #fff;
+  max-width: 50vw;
+  margin: 10px auto;
+}
+
+.services .flip {
+  position: relative;
+  padding: 5px;
+}
+
+.services .flip .deg1 {
+  position: absolute;
+  bottom: 2px;
+  left: -30px;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  content: '';
+  background: #164C51;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 0 auto;
+}
+
+.services .flip .deg2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  content: '';
+  background: #ED4B22;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 0 auto;
+}
+
+.services .flip .deg3 {
+  position: absolute;
+  bottom: 2px;
+  left: 30px;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  content: '';
+  background: #164C51;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 0 auto;
+}
+
+.services .flip::before {
+  position: absolute;
+  bottom: 4px;
+  left: 100px;
+  right: 0;
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: #198EA4;
+  margin: 0 auto;
+}
+
+.services .flip::after {
+  position: absolute;
+  bottom: 4px;
+  left: -100px;
+  right: 0;
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: #198EA4;
+  margin: 0 auto;
 }
 
 .services .container {
@@ -257,8 +339,8 @@
 .services .container .serviceBx {
   position: relative;
   background: #E6DDA5;
-  width: 350px;
-  height: 400px;
+  width: 150px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,6 +358,6 @@
 
 .services .container .serviceBx div h2 {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
