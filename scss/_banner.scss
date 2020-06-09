@@ -1,0 +1,149 @@
+// Header
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(../img/backgrounds/_MG_0542-HDR.jpg);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        z-index: 10000;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 3vw;
+                margin-right: 10px;
+            }
+
+            .name {
+                color: #fff;
+                text-decoration: none;
+                font-size: 24px;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+        }
+
+        .toggle {
+            position: relative;
+            width: 36px;
+            height: 38px;
+            background: url(../img/toggle.png);
+            background-size: cover;
+            cursor: pointer;
+        }
+    }
+
+    .content {
+        position: relative;
+        max-width: 750px;
+        margin-left: 100px;
+
+        h2 {
+            justify-self: start;
+            color: $primary;
+            font-size: 60px;
+        }
+
+        h4 {
+            text-align: start;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .book {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 10px 100px;
+            margin-left: 220px;
+            color: #fff;
+            background: $accent;
+            border: $accent 2px solid;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0);
+                transition: 0.3s;
+            }
+        }
+    }
+
+
+    .info {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        width: 60vw;
+        padding: 40px 100px;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+        background: $dark;
+        color: #fff;
+
+        .infoCard {
+            width: 30vw;
+            text-align: start;
+
+            i {
+                color: $secondary;
+                float: left;
+                font-size: 25px;
+            }
+        }
+    }
+
+    .social {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        right: 0;
+        height: 6.3vh;
+        width: 39.1vw;
+        align-items: center;
+        z-index: 10000;
+        background: $secondary;
+
+        i {
+            margin: 0 20px;
+            justify-self: start;
+            color: $dark;
+            float: left;
+            font-size: 25px;
+
+            &:first-child {
+                margin-left: 100px;
+            }
+
+            &:hover {
+                color: $background;
+                cursor: pointer;
+            }
+        }
+    }
+}
