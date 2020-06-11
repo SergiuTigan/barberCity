@@ -1,91 +1,20 @@
-.services {
+#services {
     background: $dark;
     padding: 100px;
+    padding-top:50px;
     text-align: center;
 
     h2 {
         color: $accent;
     }
 
+    @include del($primary, $accent, $light);
+
     .text {
         position: relative;
         color: #fff;
-        max-width: 50vw;
+        max-width: 30vw;
         margin: 10px auto;
-    }
-
-    .flip {
-        position: relative;
-        padding: 5px;
-
-        .deg1 {
-            position: absolute;
-            bottom: 2px;
-            left: -30px;
-            right: 0;
-            width: 6px;
-            height: 6px;
-            content: '';
-            background: $secondary;
-            -webkit-transform: rotate(135deg);
-            -ms-transform: rotate(135deg);
-            transform: rotate(135deg);
-            margin: 0 auto;
-        }
-
-        .deg2 {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 10px;
-            height: 10px;
-            content: '';
-            background: $background;
-            -webkit-transform: rotate(135deg);
-            -ms-transform: rotate(135deg);
-            transform: rotate(135deg);
-            margin: 0 auto;
-        }
-
-        .deg3 {
-            position: absolute;
-            bottom: 2px;
-            left: 30px;
-            right: 0;
-            width: 6px;
-            height: 6px;
-            content: '';
-            background: $secondary;
-            -webkit-transform: rotate(135deg);
-            -ms-transform: rotate(135deg);
-            transform: rotate(135deg);
-            margin: 0 auto;
-        }
-
-        &::before {
-            position: absolute;
-            bottom: 4px;
-            left: 100px;
-            right: 0;
-            content: '';
-            width: 40px;
-            height: 1px;
-            background: $background;
-            margin: 0 auto;
-        }
-
-        &::after {
-            position: absolute;
-            bottom: 4px;
-            left: -100px;
-            right: 0;
-            content: '';
-            width: 40px;
-            height: 1px;
-            background: $background;
-            margin: 0 auto;
-        }
     }
 
     .container {
@@ -94,29 +23,38 @@
         align-items: center;
         flex-direction: row;
         margin-top: 60px;
-        color: $background;
+        width: 50vw;
+        margin: 50px auto;
+        color: $lightest;
 
         .serviceBx {
             position: relative;
-            background: $background;
-            width: 150px;
-            height: 150px;
-            display: flex;
-            justify-content: center;
+            width: 13vw;
+            height: 15vh;
             align-items: center;
+            display: flex;
+            flex-direction: column;
+            ;
 
-            div {
-                img {
-                    max-width: 100px;
-                }
-
-                h2 {
-                    font-weight: 800;
-                    font-size: 17px;
-                    letter-spacing: 1px;
-                    color: $accent;
-                }
+            img {
+                border: $accent 2px solid;
+                padding: 10px;
+                max-width: 100px;
+                color: #fff;
             }
+
+            h2 {
+                font-weight: 800;
+                font-size: 17px;
+                letter-spacing: 1px;
+                color: $light;
+                margin-top:10px;
+            }
+            p{
+                padding-top:20px;
+                color:$primary;
+            }
+
         }
     }
 

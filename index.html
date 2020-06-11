@@ -23,10 +23,10 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a class="accent" href="#about">About</a></li>
-                        <li><a class="accent" href="#services">Services</a></li>
-                        <li><a class="accent" href="#prices">Prices</a></li>
-                        <li><a href="#book">Book a Spot</a></li>
+                        <li class="hoverC"><a class="accent hover hoverL" href="#about">About</a></li>
+                        <li class="hoverC"><a class="accent hover hoverL" href="#services">Services</a></li>
+                        <li class="hoverC"><a class="accent hover hoverL" href="#prices">Prices</a></li>
+                        <li class="hoverC"><a href="#book">Book a Spot</a></li>
                     </ul>
                 </div>
             </header>
@@ -34,20 +34,31 @@
         <div class="content">
             <h4>Barber City Cluj</h4>
             <h2>We will make you stylish</h2>
-            <button class="book">Book A Spot</button>
+            <form action="#book">
+                <input type="submit" class="book" value="Book a Spot" />
+            </form>
         </div>
         <div class="info">
             <div class="infoCard">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <p>&nbsp;+40 755 215 564</p>
+                <p>&nbsp; +40 751 659 867</p>
             </div>
             <div class="infoCard">
                 <i class="fa fa-map-marker"></i>
-                <p>&nbsp;Str. Virgil Fulicea, nr. 2</p>
+                <p>&nbsp; Str. Franklin Delano Roosevelt</p>
             </div>
             <div class="infoCard">
-                <i class="fa fa-clock-o"></i>
-                <p>&nbsp;Luni - Sambata: 10 ~ 20</p>
+                <div>
+                    <i class="fa fa-clock-o"></i>
+                    <p>&nbsp; Mon: 10 ~ 18</p>
+                </div>
+                <div><i class="fa fa-clock-o"></i>
+                    <p>&nbsp; Thu - Fri: 10 ~ 20</p>
+                </div>
+                <div>
+                    <i class="fa fa-clock-o"></i>
+                    <p>&nbsp; Sat: 10 ~ 15</p>
+                </div>
             </div>
         </div>
         <div class="social">
@@ -57,7 +68,7 @@
         </div>
     </div>
     <!-- About -->
-    <section class="about" id="about">
+    <section id="about">
         <div class="contentBx">
             <h2 class="heading">About Us</h2>
             <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, molestiae excepturi.
@@ -76,7 +87,7 @@
     </section>
     <!-- Services -->
 
-    <section class="services" id="services">
+    <section id="services">
         <h2 class="heading">Our Services</h2>
         <p class="flip">
             <span class="deg1"></span>
@@ -85,30 +96,139 @@
         </p>
         <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas error fugiat eaque nulla nemo
             quam
-            officiis voluptate illo! Nemo repellat quas natus. Totam consequuntur ut eum natus fuga quam laboriosam unde
-            mollitia asperiores, illum, velit sint perferendis exercitationem consectetur veritatis possimus expedita
-            tempora officiis nemo aperiam. Praesentium beatae facilis porro?</p>
+            officiis voluptate illo! </p>
         <div class="container">
             <div class="serviceBx">
-                <div>
-                    <img src="img/scissor.png" alt="Tuns">
-                    <h2>Tuns</h2>
-                </div>
+                <img src="img/icons/hairdryer-and-comb.svg" alt="Styling">
+                <h2>Styling</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, optio!</p>
             </div>
             <div class="serviceBx">
-                <div>
-                    <img src="img/bearded.png" alt="Barbierit">
-                    <h2>Barbierit</h2>
-                </div>
+                <img src="img/icons/razors.svg" alt="Barbierit">
+                <h2>Clean Shaving</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, optio!</p>
             </div>
             <div class="serviceBx">
-                <div>
-                    <img src="img/comb.png" alt="Styling">
-                    <h2>Styling</h2>
-                </div>
+                <img src="img/icons/scissor-and-comb.svg" alt="Tuns">
+                <h2>Men's Haircuts</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, obcaecati.</p>
             </div>
     </section>
+    <!-- Prices -->
+    <section id="prices">
+        <h2 class="heading">Price Table</h2>
+        <p class="flip">
+            <span class="deg1"></span>
+            <span class="deg2"></span>
+            <span class="deg3"></span>
+        </p>
+        <p class='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam autem iure asperiores voluptatem
+            ea ex dolor
+            sint, reprehenderit harum id voluptatum similique accusamus. Possimus, cum.</p>
+        <div class="table">
+            <div class="col">
+                <div class="priceL">
+                    <div class="service">
+                        <h2>Haircut</h2>
+                        <h2>70 RON | 60'</h2>
+                    </div>
+                    <div class="service">
+                        <h2>Haircut & Beard</h2>
+                        <h2>95 RON | 60'</h2>
+                    </div>
+                    <div class="service">
+                        <h2>Haircut & Hot Towel Shave</h2>
+                        <h2>110 RON | 90'</h2>
+                    </div>
+                    <div class="service">
+                        <h2>Haircut for kids</h2>
+                        <h2>60 RON | 60'</h2>
+                    </div>
+                    <div class="service">
+                        <h2>Full Beard</h2>
+                        <h2>50 RON | 30'</h2>
+                    </div>
+                    <div class="service">
+                        <h2>Quick Beard</h2>
+                        <h2>30 RON | 20'</h2>
+                    </div>
+
+                    <div class="service">
+                        <h2>Hot Towel Shave</h2>
+                        <h2>60 RON | 45'</h2>
+                    </div>
+                    <div class="service">
+                        <h2>Hair wash & Styling</h2>
+                        <h2>30 RON | 15'</h2>
+                    </div>
+                    <div class="service">
+                        <h2>Father & Son</h2>
+                        <h2>110 RON | 100'</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="book">
+        <header>
+            <h2>Our Hair Stylists</h2>
+            <p class="flip">
+                <span class="deg1"></span>
+                <span class="deg2"></span>
+                <span class="deg3"></span>
+            </p>
+            <p>Here you can find the bread and butter of our barbershop. If you want to find out more about their works
+                don't hesitate to check out our instagram page and if you want to make an appointment with one of them,
+                just click their profile below.</p>
+
+
+        </header>
+        <div class="container">
+            <div class="staff">
+                <div class="img" style="background: url(../img/bog.jpg) no-repeat;"></div>
+                <div class="text">
+                    <h3>Bogdan</h3>
+                    <span>Hairstylist</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quod.</p>
+                </div>
+            </div>
+            <div class="staff">
+                <div class="img" style="background: url(../img/ovi.jpg) no-repeat;"></div>
+                <div class="text">
+                    <h3>Ovi</h3>
+                    <span>Hairstylist</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quod.</p>
+                </div>
+            </div>
+            <div class="staff">
+                <div class="img" style="background: url(../img/rob.jpg) no-repeat;"></div>
+                <div class="text">
+                    <h3>Robi</h3>
+                    <span>Hairstylist</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quod.</p>
+                </div>
+            </div>
+            <div class="staff">
+                <div class="img" style="background: url(../img/cat.jpg) no-repeat;"></div>
+                <div class="text">
+                    <h3>Catalin</h3>
+                    <span>Hairstylist</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quod.</p>
+                </div>
+            </div>
+            <div class="staff">
+                <div class="img" style="background: url(../img/dar.jpg) no-repeat;"></div>
+                <div class="text">
+                    <h3>Darius</h3>
+                    <span>Hairstylist</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quod.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="js/script.js"></script>
+    <div hidden=true>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </body>
 
 </html>

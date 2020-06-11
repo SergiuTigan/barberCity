@@ -1,3 +1,5 @@
+$animate: all 0.2s ease-in-out;
+
 // Header
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5),
@@ -35,7 +37,6 @@
             &.bla {
                 background: $primary;
                 padding: 5px 100px;
-                transition: 0.3s;
 
                 .accent {
                     color: $accent !important;
@@ -52,7 +53,7 @@
                 }
 
                 .name {
-                    color: $background;
+                    color: $accent;
                     text-decoration: none;
                     font-size: 24px;
                     font-weight: 700;
@@ -71,125 +72,180 @@
                     flex-direction: row;
                     list-style: none;
 
-                    li {
+                    .hoverC {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+
                         a {
                             font-size: 20px;
                             font-weight: 700;
                             text-decoration: none;
-                            color: $background;
+                            color: $accent;
+                        }
+
+                        .hover {
+                            text-align: center;
+                            transition: $animate;
+                            position: relative;
+                            &:before,
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: 2px;
+                                width: 0px;
+                                height: 2px;
+                                transition: $animate;
+                                transition-duration: 0.2s;
+                                opacity: 0;
+                                background-color: darken($accent, 0%);
+                            }
+
+                            &.hoverL {
+                                &:before {
+                                    left: 20%;
+                                }
+
+                                &:after {
+                                    right: 20%;
+                                }
+                            }
 
                         }
 
-                        &:last-child {
-                            a {
-                                border: $secondary 2px solid;
-                                border-radius: 10px;
-                                padding: 5px;
-                                color: $background;
+                        &:hover {
+                            cursor: pointer;
+
+                            .hover {
+
+                                &:before,
+                                &:after {
+                                    width: 100%;
+                                    opacity: 1;
+                                }
+
+                                &.hover-3,
+                                &.hover-4 {
+
+                                    &:before,
+                                    &:after {
+                                        width: 50%;
+                                    }
+                                }
                             }
                         }
+                            &:last-child {
+                                a {
+                                    border: $accent 2px solid;
+                                    border-radius: 10px;
+                                    padding: 5px;
+                                    color: $accent;
+                                }
+                            }
 
-                        &:last-child:hover {
-                            a {
-                                background: $secondary;
-                                color: $background;
+                            &:last-child:hover {
+                                a {
+                                    background: $accent;
+                                    color: $primary;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
 
-    .content {
-        position: relative;
-        max-width: 750px;
-        margin-left: 100px;
+        .content {
+            position: relative;
+            max-width: 750px;
+            margin-left: 100px;
 
-        h2 {
-            justify-self: start;
-            color: $primary;
-            font-size: 60px;
-        }
+            h2 {
+                justify-self: start;
+                color: $primary;
+                font-size: 60px;
+            }
 
-        h4 {
-            text-align: start;
-            color: #fff;
-            font-size: 30px;
-        }
+            h4 {
+                text-align: start;
+                color: #fff;
+                font-size: 30px;
+            }
 
-        .book {
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 10px 100px;
-            margin-left: 220px;
-            color: #fff;
-            background: $accent;
-            border: $accent 2px solid;
-            border-radius: 5px;
-            cursor: pointer;
+            .book {
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 10px 100px;
+                margin-left: 220px;
+                color: #fff;
+                background: $accent;
+                border: $accent 2px solid;
+                border-radius: 100px;
+                cursor: pointer;
 
-            &:hover {
-                background-color: rgba(255, 255, 255, 0);
-                transition: 0.3s;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0);
+                    transition: 0.3s;
+                }
             }
         }
-    }
 
 
-    .info {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        bottom: 0;
-        left: 0;
-        width: 60vw;
-        padding: 40px 100px;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 10000;
-        background: $dark;
-        color: #fff;
+        .info {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            bottom: 0;
+            left: 0;
+            width: 60vw;
+            padding: 40px 100px;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+            background: $dark;
+            color: #fff;
 
-        .infoCard {
-            width: 30vw;
-            text-align: start;
+            .infoCard {
+                width: 30vw;
+                text-align: start;
+                div{
+                    padding:2.5px 0;
+                }
+                i {
+                    color: $primary;
+                    float: left;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .social {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            bottom: 0;
+            right: 0;
+            height: 6.3vh;
+            width: 39.1vw;
+            align-items: center;
+            z-index: 10000;
+            background: $primary;
 
             i {
-                color: $secondary;
+                margin: 0 20px;
+                justify-self: start;
+                color: $dark;
                 float: left;
                 font-size: 25px;
+
+                &:first-child {
+                    margin-left: 100px;
+                }
+
+                &:hover {
+                    color: $lightest;
+                    cursor: pointer;
+                }
             }
         }
     }
-
-    .social {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        bottom: 0;
-        right: 0;
-        height: 6.3vh;
-        width: 39.1vw;
-        align-items: center;
-        z-index: 10000;
-        background: $secondary;
-
-        i {
-            margin: 0 20px;
-            justify-self: start;
-            color: $dark;
-            float: left;
-            font-size: 25px;
-
-            &:first-child {
-                margin-left: 100px;
-            }
-
-            &:hover {
-                color: $background;
-                cursor: pointer;
-            }
-        }
-    }
-}
