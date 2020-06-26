@@ -30,11 +30,11 @@
         .serviceBx {
             position: relative;
             width: 20%;
-            height: 15vh;
+            height: 100%;
             align-items: center;
             display: flex;
             flex-direction: column;
-            ;
+
 
             img {
                 border: $accent 2px solid;
@@ -63,11 +63,10 @@
 
 @media screen and (max-width:1200px) {
     #services {
-        height: 100vh;
 
         .text {
             max-width: 100%;
-            padding-bottom:20px;
+            padding-bottom: 20px;
         }
 
         .container {
@@ -76,9 +75,6 @@
 
             .serviceBx {
                 padding: 0 50px;
-
-
-                p {}
             }
         }
     }

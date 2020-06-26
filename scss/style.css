@@ -613,7 +613,7 @@
 #services .container .serviceBx {
   position: relative;
   width: 20%;
-  height: 15vh;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -647,9 +647,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #services {
-    height: 100vh;
-  }
   #services .text {
     max-width: 100%;
     padding-bottom: 20px;
@@ -849,7 +846,6 @@
 }
 
 #book {
-  min-height: 50vh;
   background: #090909;
   width: 99vw;
   margin: auto;
@@ -1010,6 +1006,27 @@
 
 #book .container .staff .text p {
   font-style: italic;
+}
+
+@media screen and (max-width: 1200px) {
+  #book .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #book .container .staff {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #book .container .staff .img {
+    margin-top: 20px;
+    height: 20vh;
+    width: 50%;
+  }
 }
 
 * {
