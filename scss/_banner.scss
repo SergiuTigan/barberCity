@@ -28,15 +28,15 @@ $animate: all 0.2s ease-in-out;
             left: 0;
             width: 100%;
             display: flex;
-            padding: 40px 100px;
             justify-content: space-between;
             align-items: center;
             align-content: center;
             z-index: 10000;
 
-            &.bla {
+            &.fixed {
                 background: $primary;
-                padding: 5px 100px;
+                padding-top: 5px;
+                padding-bottom: 5px;
 
                 .accent {
                     color: $accent !important;
@@ -48,7 +48,6 @@ $animate: all 0.2s ease-in-out;
                 align-items: center;
 
                 img {
-                    width: 3vw;
                     margin-right: 10px;
                 }
 
@@ -88,6 +87,7 @@ $animate: all 0.2s ease-in-out;
                             text-align: center;
                             transition: $animate;
                             position: relative;
+
                             &:before,
                             &:after {
                                 content: "";
@@ -134,83 +134,91 @@ $animate: all 0.2s ease-in-out;
                                 }
                             }
                         }
-                            &:last-child {
-                                a {
-                                    border: $accent 2px solid;
-                                    border-radius: 10px;
-                                    padding: 5px;
-                                    color: $accent;
-                                }
-                            }
 
-                            &:last-child:hover {
-                                a {
-                                    background: $accent;
-                                    color: $primary;
-                                }
+                        &:last-child {
+                            a {
+                                border: $accent 2px solid;
+                                border-radius: 10px;
+                                padding: 5px;
+                                color: $accent;
+                            }
+                        }
+
+                        &:last-child:hover {
+                            a {
+                                background: $accent;
+                                color: $primary;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
-        .content {
-            position: relative;
-            max-width: 750px;
-            margin-left: 100px;
+    .content {
+        position: relative;
+        max-width: 750px;
+        margin-left: 100px;
 
-            h2 {
-                justify-self: start;
-                color: $primary;
-                font-size: 60px;
-            }
-
-            h4 {
-                text-align: start;
-                color: #fff;
-                font-size: 30px;
-            }
-
-            .book {
-                font-size: 1rem;
-                font-weight: 700;
-                padding: 10px 100px;
-                margin-left: 220px;
-                color: #fff;
-                background: $accent;
-                border: $accent 2px solid;
-                border-radius: 100px;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0);
-                    transition: 0.3s;
-                }
-            }
+        h2 {
+            justify-self: start;
+            color: $primary;
+            font-size: 60px;
         }
 
+        h4 {
+            text-align: start;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .book {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 10px 100px;
+            margin-left: 220px;
+            color: #fff;
+            background: $accent;
+            border: $accent 2px solid;
+            border-radius: 100px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0);
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
 
         .info {
-            position: absolute;
             display: flex;
             flex-direction: row;
-            bottom: 0;
-            left: 0;
-            width: 60vw;
-            padding: 40px 100px;
+            padding: 40px 20px;
             justify-content: space-between;
             align-items: center;
             z-index: 10000;
             background: $dark;
             color: #fff;
+            width: 70%;
 
             .infoCard {
-                width: 30vw;
+                width: 33%;
                 text-align: start;
-                div{
-                    padding:2.5px 0;
+
+                div {
+                    padding: 2.5px 0;
                 }
+
                 i {
                     color: $primary;
                     float: left;
@@ -220,13 +228,11 @@ $animate: all 0.2s ease-in-out;
         }
 
         .social {
-            position: absolute;
+            align-self: flex-end;
             display: flex;
             flex-direction: row;
-            bottom: 0;
-            right: 0;
-            height: 6.3vh;
-            width: 39.1vw;
+            height: 30%;
+            width: 30%;
             align-items: center;
             z-index: 10000;
             background: $primary;
@@ -249,3 +255,206 @@ $animate: all 0.2s ease-in-out;
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+    .banner {
+        position: relative;
+
+        .content {
+            position: relative;
+            max-width: 100%;
+            margin-left: 10%;
+
+            h2 {
+                justify-self: start;
+                color: $light;
+                font-size: 100%;
+            }
+
+            h4 {
+                text-align: start;
+                color: #fff;
+                font-size: 200%;
+            }
+
+            .book {
+                margin-top: 10%;
+                margin-left: -8%;
+                margin-right: 10%;
+            }
+
+        }
+
+        .footer {
+            flex-direction: column;
+            .info {
+                width: 100%;
+                flex-direction: column;
+                padding: 1%;
+                justify-content: space-evenly;
+
+                .infoCard {
+                    width: 100%;
+                    justify-content: center;
+                    text-align: center;
+                    margin: auto;
+                    display: flex;
+                }
+            }
+
+            .social {
+                width: 100%;
+                height:100%;
+                padding: 1%;
+                justify-content: space-evenly;
+                margin-right: auto;
+                i:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .sticky {
+            header {
+                padding: 1%;
+                background: $primary;
+
+                .fixed {
+                    padding: 2%;
+                }
+
+                .logo {
+                    img {
+                        width: 20%;
+                    }
+                }
+
+                .nav {
+                    .menu {
+                        visibility: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        position: fixed;
+                        align-items: center;
+                        justify-content: center;
+                        align-content: center;
+                        left: -50%;
+                        top: -65%;
+                        width: 200%;
+                        height: 200%;
+                        margin: auto;
+                        background: rgba($dark, 0.8);
+
+                        li {
+                            padding-top: 1%;
+
+                            a {
+                                font-size: 200%;
+                            }
+                        }
+                    }
+
+                    .toggler {
+                        position: absolute;
+                        right: 0;
+                        z-index: 2;
+                        cursor: pointer;
+                        width: 100px;
+                        height: 100px;
+                        opacity: 0;
+
+                        &:checked+.hamburger {
+                            div {
+                                transform: rotate(135deg);
+
+                                &::before,
+                                &::after {
+                                    top: 0;
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+
+                        &:checked~.menu {
+                            visibility: visible;
+
+                            div {
+                                transform: scale(1);
+                                transition-duration: 0.75s;
+
+                                div {
+                                    opacity: 1;
+                                    transition: opacity 0.4s ease 0.4s;
+                                }
+                            }
+                        }
+                    }
+
+                    .hamburger {
+                        position: absolute;
+                        top: -50px;
+                        right: 0;
+                        z-index: 1;
+                        width: 60px;
+                        height: 100px;
+                        padding: 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        div {
+                            position: relative;
+                            flex: none;
+                            width: 100%;
+                            height: 5px;
+                            background: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 5px;
+                            transition: all 0.4s ease;
+
+                            &::before,
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                z-index: 1;
+                                top: -10px;
+                                width: 100%;
+                                height: 5px;
+                                background: inherit;
+                                border-radius: 5px;
+                            }
+
+                            &::after {
+                                top: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .toggler {
+        visibility: hidden;
+    }
+
+    .banner {
+        .sticky {
+            header {
+                padding: 40px 100px;
+
+                .logo {
+                    img {
+                        width: 3vw;
+                    }
+                }
+            }
+        }
+    }
+}

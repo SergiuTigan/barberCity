@@ -16,13 +16,17 @@
     <!-- Banner -->
     <div class="banner">
         <div class="sticky">
-            <header class="bla">
+            <header class="fixed">
                 <div class="logo">
                     <img src="img/logo_white.png" alt="">
                     <a href="#home" class="name accent">Barber City</a>
                 </div>
                 <div class="nav">
-                    <ul>
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger">
+                        <div></div>
+                    </div>
+                    <ul class="menu">
                         <li class="hoverC"><a class="accent hover hoverL" href="#about">About</a></li>
                         <li class="hoverC"><a class="accent hover hoverL" href="#services">Services</a></li>
                         <li class="hoverC"><a class="accent hover hoverL" href="#prices">Prices</a></li>
@@ -38,39 +42,47 @@
                 <input type="submit" class="book" value="Book a Spot" />
             </form>
         </div>
-        <div class="info">
-            <div class="infoCard">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <p>&nbsp; +40 751 659 867</p>
-            </div>
-            <div class="infoCard">
-                <i class="fa fa-map-marker"></i>
-                <p>&nbsp; Str. Franklin Delano Roosevelt</p>
-            </div>
-            <div class="infoCard">
-                <div>
-                    <i class="fa fa-clock-o"></i>
-                    <p>&nbsp; Mon: 10 ~ 18</p>
+        <div class="footer">
+            <div class="info">
+                <div class="infoCard">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p>&nbsp; +40 751 659 867</p>
                 </div>
-                <div><i class="fa fa-clock-o"></i>
-                    <p>&nbsp; Thu - Fri: 10 ~ 20</p>
+                <div class="infoCard">
+                    <i class="fa fa-map-marker"></i>
+                    <p>&nbsp; Str. Franklin Delano Roosevelt</p>
                 </div>
-                <div>
-                    <i class="fa fa-clock-o"></i>
-                    <p>&nbsp; Sat: 10 ~ 15</p>
+                <div class="infoCard">
+                    <div>
+                        <i class="fa fa-clock-o"></i>
+                        <p>&nbsp; Mon: 10 ~ 18</p>
+                    </div>
+                    <div><i class="fa fa-clock-o"></i>
+                        <p>&nbsp; Thu - Fri: 10 ~ 20</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-clock-o"></i>
+                        <p>&nbsp; Sat: 10 ~ 15</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="social">
-            <i class="fa fa-facebook-official"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i>
+            <div class="social">
+                <i class="fa fa-facebook-official"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
         </div>
     </div>
+
     <!-- About -->
     <section id="about">
         <div class="contentBx">
             <h2 class="heading">About Us</h2>
+            <p class="flip">
+                <span class="deg1"></span>
+                <span class="deg2"></span>
+                <span class="deg3"></span>
+            </p>
             <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, molestiae excepturi.
                 Obcaecati, ad
                 itaque. Quis suscipit aspernatur, fugit accusantium quisquam ipsum soluta consequatur doloribus quo
@@ -100,7 +112,7 @@
         <div class="container">
             <div class="serviceBx">
                 <img src="img/icons/hairdryer-and-comb.svg" alt="Styling">
-                <h2>Styling</h2>
+                <h2>Men's Styling</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, optio!</p>
             </div>
             <div class="serviceBx">

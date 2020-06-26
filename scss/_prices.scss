@@ -74,3 +74,21 @@
     }
 
 }
+
+@media screen and (max-width:1200px){
+    #prices{
+        .table{
+            .col{
+                .priceL{
+                    display:flex;
+                    flex-direction:column;
+                    .service{
+                        width:100%;
+                        padding-top:10px;
+                    }
+                }
+            }
+        }
+
+    }
+}

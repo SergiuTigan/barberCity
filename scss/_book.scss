@@ -1,5 +1,4 @@
 #book {
-    min-height: 50vh;
     background: $dark;
     width: 99vw;
     margin: auto;
@@ -78,6 +77,24 @@
 
                 p {
                     font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #book {
+        .container{
+            display:flex;
+            flex-direction: column;
+            .staff{
+                width:100%;
+                margin-bottom:20px;
+                .img{
+                    margin-top:20px;
+                    height:20vh;
+                    width:50%;
                 }
             }
         }
