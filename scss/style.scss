@@ -52,3 +52,17 @@
         background-size: cover;
     }
 }
+
+@media screen and (max-width: 1200px){
+    @include del($dark, $accent, $dark);
+    #about{
+        .contentBx{
+            width:100%;
+            padding:30px;
+            text-align:center;
+        }
+        .imgBx{
+            display:none;
+        }
+    }
+}

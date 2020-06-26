@@ -502,8 +502,8 @@
 
 #services {
   background: #090909;
-  padding: 100px;
-  padding-top: 50px;
+  padding: 10%;
+  padding-top: 3%;
   text-align: center;
 }
 
@@ -586,8 +586,8 @@
 #services .text {
   position: relative;
   color: #fff;
-  max-width: 30vw;
-  margin: 10px auto;
+  max-width: 40%;
+  margin: 2% auto;
 }
 
 #services .container {
@@ -604,15 +604,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 60px;
-  width: 50vw;
-  margin: 50px auto;
+  margin-top: 10%;
+  width: 70%;
+  margin: 3% auto;
   color: #CFCFCF;
 }
 
 #services .container .serviceBx {
   position: relative;
-  width: 13vw;
+  width: 20%;
   height: 15vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -644,6 +644,24 @@
 #services .container .serviceBx p {
   padding-top: 20px;
   color: #767676;
+}
+
+@media screen and (max-width: 1200px) {
+  #services {
+    height: 70vh;
+  }
+  #services .text {
+    max-width: 100%;
+  }
+  #services .container {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #services .container .serviceBx {
+    padding: 0 50px;
+  }
 }
 
 #prices {
@@ -1024,4 +1042,81 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .flip {
+    position: relative;
+    padding: 5px;
+    margin: 15px 0;
+  }
+  .flip .deg1 {
+    position: absolute;
+    bottom: 2px;
+    left: -30px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    content: '';
+    background: #A4A4A4;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    margin: 0 auto;
+  }
+  .flip .deg2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background: #090909;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    margin: 0 auto;
+  }
+  .flip .deg3 {
+    position: absolute;
+    bottom: 2px;
+    left: 30px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    content: '';
+    background: #A4A4A4;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    margin: 0 auto;
+  }
+  .flip::before {
+    position: absolute;
+    bottom: 4px;
+    left: 100px;
+    right: 0;
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: #090909;
+    margin: 0 auto;
+  }
+  .flip::after {
+    position: absolute;
+    bottom: 4px;
+    left: -100px;
+    right: 0;
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: #090909;
+    margin: 0 auto;
+  }
+  #about .contentBx {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+  #about .imgBx {
+    display: none;
+  }
 }

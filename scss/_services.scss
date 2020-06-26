@@ -1,7 +1,7 @@
 #services {
     background: $dark;
-    padding: 100px;
-    padding-top:50px;
+    padding: 10%;
+    padding-top: 3%;
     text-align: center;
 
     h2 {
@@ -13,8 +13,8 @@
     .text {
         position: relative;
         color: #fff;
-        max-width: 30vw;
-        margin: 10px auto;
+        max-width: 40%;
+        margin: 2% auto;
     }
 
     .container {
@@ -22,14 +22,14 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        margin-top: 60px;
-        width: 50vw;
-        margin: 50px auto;
+        margin-top: 10%;
+        width: 70%;
+        margin: 3% auto;
         color: $lightest;
 
         .serviceBx {
             position: relative;
-            width: 13vw;
+            width: 20%;
             height: 15vh;
             align-items: center;
             display: flex;
@@ -48,14 +48,37 @@
                 font-size: 17px;
                 letter-spacing: 1px;
                 color: $light;
-                margin-top:10px;
+                margin-top: 10px;
             }
-            p{
-                padding-top:20px;
-                color:$primary;
+
+            p {
+                padding-top: 20px;
+                color: $primary;
             }
 
         }
     }
 
+}
+
+@media screen and (max-width:1200px) {
+    #services {
+        height: 70vh;
+
+        .text {
+            max-width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            justify-content: space-between;
+
+            .serviceBx {
+                padding: 0 50px;
+
+
+                p {}
+            }
+        }
+    }
 }
