@@ -389,7 +389,7 @@
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    left: -58%;
+    left: -50%;
     top: -65%;
     width: 200%;
     height: 200%;
@@ -648,10 +648,11 @@
 
 @media screen and (max-width: 1200px) {
   #services {
-    height: 70vh;
+    height: 100vh;
   }
   #services .text {
     max-width: 100%;
+    padding-bottom: 20px;
   }
   #services .container {
     width: 100%;
@@ -829,6 +830,22 @@
   height: 1px;
   border-bottom: 1px dashed #A4A4A4;
   z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+  #prices .table .col .priceL {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #prices .table .col .priceL .service {
+    width: 100%;
+    padding-top: 10px;
+  }
 }
 
 #book {
