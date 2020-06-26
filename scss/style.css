@@ -35,7 +35,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -47,12 +46,13 @@
   z-index: 10000;
 }
 
-.banner .sticky header.bla {
+.banner .sticky header.fixed {
   background: #767676;
-  padding: 5px 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.banner .sticky header.bla .accent {
+.banner .sticky header.fixed .accent {
   color: #A4A4A4 !important;
 }
 
@@ -66,7 +66,6 @@
 }
 
 .banner .sticky header .logo img {
-  width: 3vw;
   margin-right: 10px;
 }
 
@@ -209,8 +208,7 @@
   transition: 0.3s;
 }
 
-.banner .info {
-  position: absolute;
+.banner .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,10 +216,22 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: absolute;
   bottom: 0;
   left: 0;
-  width: 60vw;
-  padding: 40px 100px;
+  width: 100%;
+  height: 20%;
+}
+
+.banner .footer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 40px 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -231,25 +241,27 @@
   z-index: 10000;
   background: #090909;
   color: #fff;
+  width: 70%;
 }
 
-.banner .info .infoCard {
-  width: 30vw;
+.banner .footer .info .infoCard {
+  width: 33%;
   text-align: start;
 }
 
-.banner .info .infoCard div {
+.banner .footer .info .infoCard div {
   padding: 2.5px 0;
 }
 
-.banner .info .infoCard i {
+.banner .footer .info .infoCard i {
   color: #767676;
   float: left;
   font-size: 25px;
 }
 
-.banner .social {
-  position: absolute;
+.banner .footer .social {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,10 +269,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  bottom: 0;
-  right: 0;
-  height: 6.3vh;
-  width: 39.1vw;
+  height: 30%;
+  width: 30%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -268,7 +278,7 @@
   background: #767676;
 }
 
-.banner .social i {
+.banner .footer .social i {
   margin: 0 20px;
   -ms-grid-column-align: start;
       justify-self: start;
@@ -277,13 +287,217 @@
   font-size: 25px;
 }
 
-.banner .social i:first-child {
+.banner .footer .social i:first-child {
   margin-left: 100px;
 }
 
-.banner .social i:hover {
+.banner .footer .social i:hover {
   color: #CFCFCF;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner {
+    position: relative;
+  }
+  .banner .content {
+    position: relative;
+    max-width: 100%;
+    margin-left: 10%;
+  }
+  .banner .content h2 {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    color: #FFFFFF;
+    font-size: 100%;
+  }
+  .banner .content h4 {
+    text-align: start;
+    color: #fff;
+    font-size: 200%;
+  }
+  .banner .content .book {
+    margin-top: 10%;
+    margin-left: -8%;
+    margin-right: 10%;
+  }
+  .banner .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .banner .footer .info {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .banner .footer .info .infoCard {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .banner .footer .social {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-right: auto;
+  }
+  .banner .footer .social i:first-child {
+    margin-left: 0;
+  }
+  .banner .sticky header {
+    padding: 1%;
+    background: #767676;
+  }
+  .banner .sticky header .fixed {
+    padding: 2%;
+  }
+  .banner .sticky header .logo img {
+    width: 20%;
+  }
+  .banner .sticky header .nav .menu {
+    visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    left: -58%;
+    top: -65%;
+    width: 200%;
+    height: 200%;
+    margin: auto;
+    background: rgba(9, 9, 9, 0.8);
+  }
+  .banner .sticky header .nav .menu li {
+    padding-top: 1%;
+  }
+  .banner .sticky header .nav .menu li a {
+    font-size: 200%;
+  }
+  .banner .sticky header .nav .toggler {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+  .banner .sticky header .nav .toggler:checked + .hamburger div {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .banner .sticky header .nav .toggler:checked + .hamburger div::before, .banner .sticky header .nav .toggler:checked + .hamburger div::after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .banner .sticky header .nav .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  .banner .sticky header .nav .toggler:checked ~ .menu div {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition-duration: 0.75s;
+            transition-duration: 0.75s;
+  }
+  .banner .sticky header .nav .toggler:checked ~ .menu div div {
+    opacity: 1;
+    -webkit-transition: opacity 0.4s ease 0.4s;
+    transition: opacity 0.4s ease 0.4s;
+  }
+  .banner .sticky header .nav .hamburger {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 100px;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner .sticky header .nav .hamburger div {
+    position: relative;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 5px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .banner .sticky header .nav .hamburger div::before, .banner .sticky header .nav .hamburger div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 5px;
+    background: inherit;
+    border-radius: 5px;
+  }
+  .banner .sticky header .nav .hamburger div::after {
+    top: 10px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .toggler {
+    visibility: hidden;
+  }
+  .banner .sticky header {
+    padding: 40px 100px;
+  }
+  .banner .sticky header .logo img {
+    width: 3vw;
+  }
 }
 
 #services {
