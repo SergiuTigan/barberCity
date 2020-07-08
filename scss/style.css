@@ -53,7 +53,7 @@
 }
 
 .banner .sticky header.fixed .accent {
-  color: #A4A4A4 !important;
+  color: #FFFFFF;
 }
 
 .banner .sticky header .logo {
@@ -70,7 +70,7 @@
 }
 
 .banner .sticky header .logo .name {
-  color: #A4A4A4;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 24px;
   font-weight: 700;
@@ -114,7 +114,7 @@
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #A4A4A4;
+  color: #FFFFFF;
 }
 
 .banner .sticky header .nav ul .hoverC .hover {
@@ -135,7 +135,7 @@
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   opacity: 0;
-  background-color: #a4a4a4;
+  background-color: white;
 }
 
 .banner .sticky header .nav ul .hoverC .hover.hoverL:before {
@@ -160,15 +160,15 @@
 }
 
 .banner .sticky header .nav ul .hoverC:last-child a {
-  border: #A4A4A4 2px solid;
+  border: #FFFFFF 2px solid;
   border-radius: 10px;
   padding: 5px;
-  color: #A4A4A4;
+  color: #FFFFFF;
 }
 
 .banner .sticky header .nav ul .hoverC:last-child:hover a {
-  background: #A4A4A4;
-  color: #767676;
+  background: #FFFFFF;
+  color: #090909;
 }
 
 .banner .content {
@@ -180,7 +180,7 @@
 .banner .content h2 {
   -ms-grid-column-align: start;
       justify-self: start;
-  color: #767676;
+  color: #fff;
   font-size: 60px;
 }
 
@@ -196,8 +196,8 @@
   padding: 10px 100px;
   margin-left: 220px;
   color: #fff;
-  background: #A4A4A4;
-  border: #A4A4A4 2px solid;
+  background: #090909;
+  border: #090909 2px solid;
   border-radius: 100px;
   cursor: pointer;
 }
@@ -276,10 +276,17 @@
           align-items: center;
   z-index: 10000;
   background: #767676;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.banner .footer .social i {
-  margin: 0 20px;
+.banner .footer .social a {
+  margin-left: 0;
+  padding: 0;
+}
+
+.banner .footer .social a i {
+  margin-left: 0 !important;
   -ms-grid-column-align: start;
       justify-self: start;
   color: #090909;
@@ -287,13 +294,33 @@
   font-size: 25px;
 }
 
-.banner .footer .social i:first-child {
+.banner .footer .social a i:first-child {
   margin-left: 100px;
 }
 
-.banner .footer .social i:hover {
+.banner .footer .social a i:hover {
   color: #CFCFCF;
   cursor: pointer;
+}
+
+.banner .footer .social svg {
+  width: 30px;
+}
+
+.banner .footer .social svg .st0 {
+  fill: #fff;
+}
+
+.banner .footer .social svg .st1 {
+  fill: #000;
+}
+
+.banner .footer .social svg:hover .st0 {
+  fill: #000;
+}
+
+.banner .footer .social svg:hover .st1 {
+  fill: #fff;
 }
 
 @media screen and (max-width: 1200px) {
@@ -612,7 +639,7 @@
 
 #services .container .serviceBx {
   position: relative;
-  width: 20%;
+  width: 25%;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -624,6 +651,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: auto;
 }
 
 #services .container .serviceBx img {
@@ -1034,6 +1062,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
