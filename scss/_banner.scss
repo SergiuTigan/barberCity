@@ -39,7 +39,7 @@ $animate: all 0.2s ease-in-out;
                 padding-bottom: 5px;
 
                 .accent {
-                    color: $accent !important;
+                    color: $light;
                 }
             }
 
@@ -52,7 +52,7 @@ $animate: all 0.2s ease-in-out;
                 }
 
                 .name {
-                    color: $accent;
+                    color: $light;
                     text-decoration: none;
                     font-size: 24px;
                     font-weight: 700;
@@ -80,7 +80,7 @@ $animate: all 0.2s ease-in-out;
                             font-size: 20px;
                             font-weight: 700;
                             text-decoration: none;
-                            color: $accent;
+                            color: $light;
                         }
 
                         .hover {
@@ -98,7 +98,7 @@ $animate: all 0.2s ease-in-out;
                                 transition: $animate;
                                 transition-duration: 0.2s;
                                 opacity: 0;
-                                background-color: darken($accent, 0%);
+                                background-color: darken($light, 0%);
                             }
 
                             &.hoverL {
@@ -137,17 +137,17 @@ $animate: all 0.2s ease-in-out;
 
                         &:last-child {
                             a {
-                                border: $accent 2px solid;
+                                border: $light 2px solid;
                                 border-radius: 10px;
                                 padding: 5px;
-                                color: $accent;
+                                color: $light;
                             }
                         }
 
                         &:last-child:hover {
                             a {
-                                background: $accent;
-                                color: $primary;
+                                background: $light;
+                                color: $dark;
                             }
                         }
                     }
@@ -163,7 +163,7 @@ $animate: all 0.2s ease-in-out;
 
         h2 {
             justify-self: start;
-            color: $primary;
+            color: #fff;
             font-size: 60px;
         }
 
@@ -179,8 +179,8 @@ $animate: all 0.2s ease-in-out;
             padding: 10px 100px;
             margin-left: 220px;
             color: #fff;
-            background: $accent;
-            border: $accent 2px solid;
+            background: $dark;
+            border: $dark 2px solid;
             border-radius: 100px;
             cursor: pointer;
 
@@ -236,21 +236,50 @@ $animate: all 0.2s ease-in-out;
             align-items: center;
             z-index: 10000;
             background: $primary;
+            justify-content: space-around;
 
-            i {
-                margin: 0 20px;
-                justify-self: start;
-                color: $dark;
-                float: left;
-                font-size: 25px;
+            a {
+                margin-left:0;
+                padding:0;
+         
+                i {
+                    margin-left: 0 !important;
+                    justify-self: start;
+                    color: $dark;
+                    float: left;
+                    font-size: 25px;
 
-                &:first-child {
-                    margin-left: 100px;
+                    &:first-child {
+                        margin-left: 100px;
+                    }
+
+                    &:hover {
+                        color: $lightest;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            svg {
+                width: 30px;
+
+                .st0 {
+                    fill: #fff;
                 }
 
-                &:hover {
-                    color: $lightest;
-                    cursor: pointer;
+                .st1 {
+                    fill: #000;
+                }
+
+            }
+
+            svg:hover {
+                .st0 {
+                    fill: #000;
+                }
+
+                .st1 {
+                    fill: #fff;
                 }
             }
         }
@@ -288,6 +317,7 @@ $animate: all 0.2s ease-in-out;
 
         .footer {
             flex-direction: column;
+
             .info {
                 width: 100%;
                 flex-direction: column;
@@ -305,10 +335,11 @@ $animate: all 0.2s ease-in-out;
 
             .social {
                 width: 100%;
-                height:100%;
+                height: 100%;
                 padding: 1%;
                 justify-content: space-evenly;
                 margin-right: auto;
+
                 i:first-child {
                     margin-left: 0;
                 }
