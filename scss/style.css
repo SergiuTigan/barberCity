@@ -376,6 +376,9 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .banner .footer .info .infoCard i {
+    display: none;
+  }
   .banner .footer .social {
     width: 100%;
     height: 100%;

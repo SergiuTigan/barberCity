@@ -330,6 +330,9 @@ $animate: all 0.2s ease-in-out;
                     text-align: center;
                     margin: auto;
                     display: flex;
+                    i{
+                        display:none;
+                    }
                 }
             }
 
